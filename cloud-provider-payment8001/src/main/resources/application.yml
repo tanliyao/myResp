@@ -11,6 +11,16 @@ spring:
     url: jdbc:mysql://localhost:3306/cloud?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
     username: root
     password: root
+  rabbitmq:
+    host: 47.96.28.143
+    port: 5672
+    username: userems
+    password: 123
+    virtual-host: /ems
+    listener:
+      direct:
+        acknowledge-mode: manual
+
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
   type-aliases-package: com.tly.springcloud.entities
